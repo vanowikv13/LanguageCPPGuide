@@ -7,7 +7,7 @@ obj/
 bin/
 Debug/
 *.sln
-
+stdafx.h
 # Precompiled Headers
 *.gch
 *.pch

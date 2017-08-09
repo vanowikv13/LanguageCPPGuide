@@ -1,5 +1,5 @@
 
-# Day 1 - rzutowanie theory
+# Day 1 - Convert type theory
 
 ## static_cast
 - [ ] It least problematic cast.

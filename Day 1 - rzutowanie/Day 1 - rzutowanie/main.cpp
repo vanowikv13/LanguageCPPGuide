@@ -21,32 +21,32 @@ struct Tiger : Animals {
 
 int main()
 {
-	//1)
+
 	double y = 3.13;
 	int x = static_cast<int>(y);
 	void* xd = static_cast<void*>(&y);
 	double* xf = static_cast<double*>(xd);
 
-	//2)
+
 	const int cx = 12;
 	auto cxd = const_cast<int*>(&cx);
 	*cxd = 13;
 
 
-	
-	//3)
 	Tiger tig(13,12);
 	auto dpointer= dynamic_cast<Animals*>(&tig);
 	dpointer->age = 13;
+	
 	const Tiger t(13, 12);
 	auto dpoit = dynamic_cast<Animals*>(const_cast<Tiger*>(&t));
 	auto dp = dynamic_cast<Tiger*>(dpoit);
 	dp->sayHello();
+	
 	Animals * pointer = new Tiger(12, 32);
 	auto po = dynamic_cast<Tiger*>(pointer);
 	po->sayHello();
 
-	//4)
+	
 	auto rcast = reinterpret_cast<int>(&dp);
 	
     return 0;
