@@ -4,20 +4,18 @@ constexpr int tabSize() {
 	return 12;
 }
 
+static constexpr int object = 13;
+
 class constX {
 public:
 	static constexpr int statConst() {
-		int x = 13;
-		return 13;
+		const int *p = &object;
+		return *p;
 	}
-
-	/*static void d() const {
-		;
-	}*/
 
 	int mk() const{
 		//d = 1; in const function we can't change the value
-		return 1;
+		return d;
 	}
 
 	int md() {
@@ -26,6 +24,7 @@ public:
 	//initialize object const in class by function
 	constX(int da):d(da),id(tabSize()) {
 	}
+
 
 
 protected:
