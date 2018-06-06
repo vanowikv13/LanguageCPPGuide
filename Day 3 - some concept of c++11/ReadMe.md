@@ -22,9 +22,9 @@
 	6. It can be used whatever data have to be Send like array, vector etc.
 
 	Method of initializer_list object:
-		* size(); 
-		* begin();
-		* end();
+		- size(); 
+		- begin();
+		- end();
 
 
 
