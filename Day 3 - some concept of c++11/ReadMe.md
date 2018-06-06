@@ -37,7 +37,7 @@
 
 
 
-####More information and links I use:
+###More information and links I use:
 	http://en.cppreference.com/w/cpp/language/list_initialization
 	https://www.youtube.com/watch?v=U6mgsPqV32A
 	https://stackoverflow.com/questions/1282295/what-exactly-is-nullptr
