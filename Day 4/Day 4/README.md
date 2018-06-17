@@ -13,9 +13,9 @@
 ### I) Conditional ? : operator
        Reason Why you should use that is because it's sometimes much faster code than without that.
        
-       Under this line you have form How it's works.
-       [ ] STRUCTURE
-       1. In typical way:
+- [ ] STRUCTURE
+       
+	   1. In typical way:
        if(condition) {
           var = x;
        } else {
@@ -23,8 +23,10 @@
        }
        2. Conditional ? : operator:
        var = condition ? x : y;
-       [ ] EXAMPLE (remember that before you will use this code first declar x variable as int)
-       1. In typical way:
+
+- [ ] EXAMPLE (remember that before you will use this code first declar x variable as int)
+       
+	   1. In typical way:
        if(2 > 3)
               x = 123;
        else
@@ -39,21 +41,31 @@
 
 ## II) Function Pointer
 ### Funtion Pointer like name says it's pointer to function so it's some variable when we can store pointer to function and later use this function.
+
 ### How use it ?
-       Form how to create function pointer:
+       
+	   Form how to create function pointer:
               return_type_function(*pointer_name)(arguments ...);
-       Example:
+       
+	   Example:
               1. void(*pointer)(); // return void and don't have any argument.
               2. int(*pointer2)(int,int); //return int and have two int argument
               3. string(*pointer3)(char *tab, int); //return string and have arguments pointer to char and int
               4. void(*writeData)(int,string, string(*function_with_data)(int));
               //This one above return void and have int, string and pointer to function argument.
-              what now ? I think we can create some function for the pointer and send it.
-              //we create function for a pointer
+              
+			  what now ? I think we can create some function for the pointer and send it.
+              
+			  //we create function for a pointer
               void sayHello() {
                      std::cout << "Hello World " << std::endl;
               }
-              pointer = &sayHello; //we put into our pointer adress for the function
+              
+			  pointer = &sayHello; //we put into our pointer adress for the function
               If you want to use function from pointer just use it as normal function.
               pointer();
-              For more example and other situation go to main.cpp
+              
+			  
+			  
+			  
+### For more example and other situation go to main.cpp
