@@ -1,4 +1,4 @@
-# Day 3 - Some the most useful concept of c++ 11
+# Day 3 - Some of the most useful concept of c++ 11
 
 ## The full article contain also example in main.cpp
 
