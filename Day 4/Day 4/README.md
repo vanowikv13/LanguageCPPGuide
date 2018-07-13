@@ -15,41 +15,43 @@ Conditional operator is shorter and faster part of code than you was written bef
 - [ ] STRUCTURE
 1. In typical way:
 ```cpp
-       if(condition) {
-          var = x;
-       } else {
-          var = y;
-       }
+if(condition)
+	variable = x;
+else
+    variable = y;
 ```
 2. Conditional ? : operator:
 ```cpp
-       var = condition ? x : y;
+variable = condition ? x : y;
 ```
 - [ ] EXAMPLE (remember that before you will use this code first declar x variable as int)
 1. In typical way:
 ```cpp
-       if(2 > 3)
-              x = 123;
-       else
-              x = 321;
+int x;
+
+if(2 > 3)
+	x = 123;
+else
+	x = 321;
 ```
 2. Conditional ? : operator:
 ```cpp
-       x = (2 > 3) ? 123 : 321;
+x = (2 > 3) ? 123 : 321;
 ```
-### So I think Why should you use conditional ? : operator?
-       1. It's faster
-       2. It's shorter
+### If you still don't know why to use it here you have two argument below:
+	1. It's faster
+	2. It's shorter
+
 ## II) Function Pointer
 ### Funtion Pointer like name says it's pointer to function so it's some variable when we can store pointer to function and later use this function.
 ##### The most important question why to use it the most time because it's easier to use pointer to function than transport data in other way.
 Let's say that you have some object and this object making every day some action(method) and this action is every time different.
 So have method action but what will be next? You can realizate this by writing to the action method pointer to function in argument and you
 will only send it to the obejct and object will just call it.
-### How use it ?
+### How it's work in code?
       
 Here you have typical form how to create pointer to function:
-       return_type_function(*pointer_name)(arguments ...);
+       **return_type_function (*pointer_name)(arguments ...);**
       
 Example:
 ```cpp
