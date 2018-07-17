@@ -14,19 +14,19 @@ This article is about why it's better to use strong enum (class) instead of enum
 ### 1. About enum types
 About enum type - An enumeration is distinct type whose value is restricted to a range of values. It's contain not changeable data, with different names. The enum type usually is used to create unique status for some part of application like: 
 ```cpp
-enum device {On, Off}
+enum device {On, Off};
 ```
 In this example it's visible that there is some device and this device can be set on 'On' or 'Off'. The enum also is like struct with static constant in enum case members are not in struct scope but in enclosing scope. So it's means that members of enum are visible outside the enum without any prefix. You cannot initialize or assign to an enum variable and any value other than one from an enumerator or variable of the same enumeration type. Type of values in enum or enum class is recognized usually by initialization of value or programmer can do it by it own using **underlying type** of the enumeration it's one of the optional things. With **underlying type** You have oportunity to mkae forward declaration.
 
 ### 2. Syntax of enumeration and rules
 **The enumeration in c++ has following syntax:**
-enum-key attr(optional) identifier(optional) enum-base(optional) { enumerator-list(optional) }; 
-enum-key attr(optional) nested-name-specifier(optional) identifier enum-base(optional) ;
+1. enum-key attr(optional) identifier(optional) enum-base(optional) { enumerator-list(optional) }; 
+2. enum-key attr(optional) nested-name-specifier(optional) identifier enum-base(optional) ;
 
 **Steps list to make enumeration:**
 1. Start from enum or enum class in first place.
 2. Attributes - optional sentence of any numbers of [attributes](https://en.cppreference.com/w/cpp/language/attributes)
-3. Identifier - the name of enumeration that is being decelerated. It's used to make the most of case re-declaration of some enum.
+3. Identifier - the name of enumeration that is being decelerated. You need it to make re-declaration of some enum.
 4. enum-base - colon (:), followed by a type-specifier-seq that names an 5. integral type (if it is cv-qualified, qualifications are ignored) that will serve as the fixed underlying type for this enumeration type
 6. enumerator-list - list of enumeration definition.
 
@@ -75,7 +75,7 @@ enum dayOfWork : int {Monday, Friday}; //ok
 enum dayInWeek : int {Monday, Thursday, Wednesday, Thursday, Friday, Saturday, Sunday};
 //code above is wrong because you can't have the same name of value in one scope
 ```
-In enum class it's possible because values in enum class they are in their class scope.
+There it's possible because values in enum class have thier own scope like in class.
 ```cpp
 enum class dayOfWork : int {Monday, Friday}; //ok
 enum class Week: int {Monday, Thursday, Wednesday, Thursday, Friday, Saturday, Sunday}; //ok
