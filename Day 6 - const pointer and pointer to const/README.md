@@ -6,7 +6,7 @@ Pointer to const data is pointer that treat data that is directed for as a const
 
 #### Structure
 
-const datatype * name;
+    const datatype * name;
 
 #### Example with const data
 ```cpp
@@ -43,7 +43,8 @@ char number = '3';
 ptr = &number;
 const char sign = '$'; //our data is constant
 
-//moving pointer is in this case is possible from non-const to const pointer in other hand we have to use convert type
+//moving pointer is in this case is possible from non-const to const one
+//in other hand we have to use convert type
 ptr = &sign;
 ```
 
@@ -52,7 +53,7 @@ ptr = &sign;
 In const pointer we can't change direction of pointer, but we can change data that pointer is direct to. It's also important to define pointer instead of only declare it, because we will get error. Const pointer can't be directed to const data because this pointer give possibility to change data that is directed to.
 
 #### Structure
-datatype * const name = pointerToData;
+    dataType * const name = pointerToData;
 
 #### Example
 ```cpp
@@ -80,11 +81,11 @@ const int favorite = 12;//const data
 ### Const pointer to const data
 The third option is a combination of const pointer and pointer to constant data.
 
-const pointer + pointer to constant data = const pointer to constant data
+    const pointer + pointer to constant data = const pointer to constant data
 
 #### Structure
 
-const dataType * const name = pointerToConstObject;
+    const dataType * const name = pointerToConstObject;
 
 #### Rules:
 1) We can't only declare pointer we have to define him from the beginning
@@ -100,17 +101,20 @@ const double data = 1.111;
 //const pointer to const data
 const double * const dptr = &data; //1)
 
-//*dptr = 123.3; //2) //error: 'dptr': you cannot assign to a variable that is const
+//*dptr = 123.3; //2)
+//error: 'dptr': you cannot assign to a variable that is const
 
 const double constNum = 123.321;
 
-//dptr = &constNum; //3) //error: 'dptr': you cannot assign to a variable that is const
+//dptr = &constNum; //3)
+//error: 'dptr': you cannot assign to a variable that is const
 
 double num = 33333.3333;
 
 const double * const dptr2 = &num; //4)
 
-//double nonConstPtr = dptr2; //5) //error: 'initializing': cannot convert from 'const double *const ' to 'double *'
+//double nonConstPtr = dptr2; //5)
+//error: 'initializing': cannot convert from 'const double *const ' to 'double *'
 
 ```
 
