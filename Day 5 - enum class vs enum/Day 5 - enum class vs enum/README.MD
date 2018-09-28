@@ -4,7 +4,7 @@
 This article is about why it's better to use strong enum (class) instead of enum and how to use it?
 ## [The full article contain also real example with c++ code in **main.cpp**](https://github.com/vanowikv13/LanguageCPPGuide/blob/master/Day%205%20-%20enum%20class%20vs%20enum/Day%205%20-%20enum%20class%20vs%20enum/main.cpp)
 
-### Chapters
+### Chapters:
 1. About enum types
 2. Syntax of enumeration and rules
 3. New friend: **strong enum (class)**
@@ -18,7 +18,7 @@ enum device {On, Off};
 ```
 In this example it's visible that there is some device and this device can be set on 'On' or 'Off'. The enum also is like struct with static constant in enum case members are not in struct scope but in enclosing scope. So it's means that members of enum are visible outside the enum without any prefix. You cannot initialize or assign to an enum variable and any value other than one from an enumerator or variable of the same enumeration type. Type of values in enum or enum class is recognized usually by initialization of value or programmer can do it by it own using **underlying type** of the enumeration it's one of the optional things. With **underlying type** You have oportunity to mkae forward declaration.
 
-### 2. Syntax of enumeration and rules
+### 2. Syntax of enumeration and rules:
 **The enumeration in c++ has following syntax:**
 1. enum-key attr(optional) identifier(optional) enum-base(optional) { enumerator-list(optional) }; 
 2. enum-key attr(optional) nested-name-specifier(optional) identifier enum-base(optional) ;
@@ -34,9 +34,8 @@ In this example it's visible that there is some device and this device can be se
 ```cpp
 enum class animals {Cow, Dog, Cat, Monkey}; //enum definition with 4 object
 enum class Colors : int {Blue, Red, Black}; //name: Color, 3 parameters, integral type int
-enum numbers {one, two, three}; //enum definition with three object //OK
-enum days {one, two, three, four, five, six, seven}; //wrong !!!!
-//using normal enum you can't have at the same place like one and one.
+enum numbers {one, two, three}; //enum definition with three object
+enum Friends {Alex, Tom, John}; //enum definition with three object
 ```
 
 ### 3. New friend: **strong enum (class)**
@@ -89,9 +88,11 @@ This is used because for sure it give you a bit of safety.
 2.  You can create safe bool type by enum. Why? Because bool type is dangerous in c++
 because of it possibility to convert bool object to another type like int etc.
 So for making it better you can make your own bool type using enum class:
+```cpp
 enum class conditionX : bool {FALSE, true}; //like bool type but more safer
+```
 
-### 5. Example where it's used
+### 5. Example where it's used:
 **In the standard library, enum classes are used for:**
 1. Mapping systems specific error codes: In <system_error>: enum class errc;
 2. Pointer safety indicators: In <memory>: enum class pointer_safety { relaxed, preferred, strict };
