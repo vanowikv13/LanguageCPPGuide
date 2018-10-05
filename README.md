@@ -10,3 +10,5 @@
 3. [Day 3 - Some the most useful concept of c++ 11](https://github.com/vanowikv13/LanguageCPPGuide/tree/master/Day%203%20-%20some%20concept%20of%20c%2B%2B11)
 4. [Day 4 - nullptr, Initializer_list and for each](https://github.com/vanowikv13/LanguageCPPGuide/tree/master/Day%204/Day%204)
 5. [Day 5 - enum class vs enum](https://github.com/vanowikv13/LanguageCPPGuide/tree/master/Day%205%20-%20enum%20class%20vs%20enum/Day%205%20-%20enum%20class%20vs%20enum)
+
+6. [Day 6 - Pointer to const data, constant pointer and constant pointer to const data](https://github.com/vanowikv13/LanguageCPPGuide/tree/master/Day%206%20-%20const%20pointer%20and%20pointer%20to%20const)

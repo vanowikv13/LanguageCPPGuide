@@ -6,7 +6,7 @@ Pointer to const data is pointer that treat data that is directed for as a const
 
 #### Structure
 
-    const datatype * name;
+    const dataType * name;
 
 #### Example with const data
 ```cpp
